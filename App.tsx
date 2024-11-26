@@ -5,6 +5,7 @@
  * @format
  */
 
+import Hello from '@components/Hello';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
@@ -77,7 +78,7 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-           
+          <Hello name="World" />
           <Section title="Step One  App.tsx">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.

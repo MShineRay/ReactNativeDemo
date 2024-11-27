@@ -4,14 +4,18 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "react-native run-ios -- --simulator='iPhone SE (3rd generation)'",
     "lint": "eslint .",
     "start": "react-native start --reset-cache",
-    "test": "jest"
+    "test": "jest",
+    "link-webview": "react-native link react-native-webview",
+    "unlink-webview": "react-native unlink react-native-webview",
+    "pod-install": "cd ios && pod install && cd .."
   },
   "dependencies": {
     "react": "18.3.1",
-    "react-native": "0.76.3"
+    "react-native": "0.76.3",
+    "react-native-webview": "^13.12.4"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

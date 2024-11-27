@@ -6,7 +6,7 @@
  */
 
 import Hello from '@components/Hello';
-import React from 'react';
+import React, {Component} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -17,7 +17,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
+import {WebView} from 'react-native-webview';
 import {
   Colors,
   DebugInstructions,
@@ -29,6 +29,18 @@ import {
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
+
+
+class MyWeb extends Component {
+  render() {
+    return (
+      <WebView
+        source={{ uri: 'https://infinite.red' }}
+        style={{ marginTop: 20, width: '100%', height: 200, borderWidth: 1, borderColor: 'red' }}
+      />
+    );
+  }
+}
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -79,6 +91,8 @@ function App(): React.JSX.Element {
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Hello name="World" />
+          {/* web-view-demo: */}
+          <MyWeb />
           <Section title="Step One  App.tsx">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.

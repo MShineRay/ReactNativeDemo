@@ -6,7 +6,7 @@
  */
 
 import Hello from '@components/Hello';
-import React, {Component} from 'react';
+import React, {Component, useEffect} from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   SafeAreaView,
@@ -16,6 +16,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Linking
 } from 'react-native';
 import {WebView} from 'react-native-webview';
 import {
@@ -25,6 +26,47 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+type SharedItem = {
+  mimeType: string,
+  data: string,
+  extraData: any,
+};
+
+// 添加URL参数的类型
+type UrlEvent = {
+  url: string;
+};
+
+// 将handleSharedContent移到App组件外部，因为它不需要访问组件状态
+const handleSharedContent = (url: string) => {
+  console.log('Handling shared content for URL:', url);
+  try {
+    const parsedUrl = new URL(url);
+    console.log('Parsed URL:', parsedUrl);
+    
+    if (parsedUrl.protocol === 'edpclient:') {
+      const params = new URLSearchParams(parsedUrl.search);
+      console.log('URL parameters:', Object.fromEntries(params));
+      
+      // 获取分享的URL
+      const sharedUrl = params.get('url');
+      if (sharedUrl) {
+        console.log('Shared URL:', sharedUrl);
+        // 处理分享的URL
+      }
+      
+      // 获取分享的文本
+      const sharedText = params.get('text');
+      if (sharedText) {
+        console.log('Shared Text:', sharedText);
+        // 处理分享的文本
+      }
+    }
+  } catch (error) {
+    console.error('Error handling shared content:', error);
+  }
+};
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -69,11 +111,41 @@ function Section({children, title}: SectionProps): React.JSX.Element {
 }
 
 function App(): React.JSX.Element {
+  console.log('App component initialized');
+
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  console.log('-----App222()');
+
+  useEffect(() => {
+    console.log('Setting up Linking listeners');
+
+    const handleUrl = ({url}: UrlEvent) => {
+      console.log('Received URL through Linking:', url);
+      handleSharedContent(url);
+    };
+
+    const subscription = Linking.addEventListener('url', handleUrl);
+    
+    // 检查初始URL
+    Linking.getInitialURL().then((url: string | null) => {
+      console.log('Initial URL:', url);
+      if (url) {
+        handleSharedContent(url);
+      }
+    }).catch(err => {
+      console.error('Error getting initial URL:', err);
+    });
+
+    return () => {
+      console.log('Cleaning up Linking listeners');
+      subscription.remove();
+    };
+  }, []);
 
   return (
     <SafeAreaView style={backgroundStyle}>
@@ -90,10 +162,10 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          <Hello name="World" />
+          {/* <Hello name="World" /> */}
           {/* web-view-demo: */}
-          <MyWeb />
-          <Section title="Step One  App.tsx">
+          {/* <MyWeb /> */}
+          {/* <Section title="Step One  App.tsx">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
           </Section>
@@ -106,7 +178,7 @@ function App(): React.JSX.Element {
           <Section title="Learn More">
             Read the docs to discover what to do next:
           </Section>
-          <LearnMoreLinks />
+          <LearnMoreLinks /> */}
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -77,3 +77,11 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+
+## Q&A
+- 1、如果pnpm start 启动失败，可以尝试使用xcode进行构建进行排查原因
+
+## react-native-share-menu
+
+- https://github.com/Expensify/react-native-share-menu/blob/master/IOS_INSTRUCTIONS.md

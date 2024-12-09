@@ -85,3 +85,8 @@ To learn more about React Native, take a look at the following resources:
 ## react-native-share-menu
 
 - https://github.com/Expensify/react-native-share-menu/blob/master/IOS_INSTRUCTIONS.md
+
+
+- 2、如何查看ios的日志
+
+- 3.https://developer.apple.com/cn/documentation/xcode/running_your_app_in_the_simulator_or_on_a_device/

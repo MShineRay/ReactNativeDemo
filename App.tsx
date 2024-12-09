@@ -49,18 +49,17 @@ const handleSharedContent = (url: string) => {
       const params = new URLSearchParams(parsedUrl.search);
       console.log('URL parameters:', Object.fromEntries(params));
       
-      // 获取分享的URL
       const sharedUrl = params.get('url');
+      const sharedText = params.get('text');
+      
       if (sharedUrl) {
-        console.log('Shared URL:', sharedUrl);
-        // 处理分享的URL
+        console.log('Received shared URL:', sharedUrl);
+        // 处理URL
       }
       
-      // 获取分享的文本
-      const sharedText = params.get('text');
       if (sharedText) {
-        console.log('Shared Text:', sharedText);
-        // 处理分享的文本
+        console.log('Received shared text:', sharedText);
+        // 处理文本
       }
     }
   } catch (error) {
@@ -122,16 +121,21 @@ function App(): React.JSX.Element {
   console.log('-----App222()');
 
   useEffect(() => {
-    console.log('Setting up Linking listeners');
+    console.log('Setting up Linking listeners in simulator');
 
     const handleUrl = ({url}: UrlEvent) => {
-      console.log('Received URL through Linking:', url);
+      console.log('[Simulator] Received URL through Linking:', url);
       handleSharedContent(url);
     };
 
-    const subscription = Linking.addEventListener('url', handleUrl);
-    
-    // 检查初始URL
+    // 测试URL scheme在模拟器中是否正常工作
+    Linking.canOpenURL('edpclient://share').then(supported => {
+      console.log('[Simulator] Can open edpclient:// URLs:', supported);
+    }).catch(err => {
+      console.error('[Simulator] Error checking URL scheme:', err);
+    });
+
+    // 先检查初始URL
     Linking.getInitialURL().then((url: string | null) => {
       console.log('Initial URL:', url);
       if (url) {
@@ -140,6 +144,9 @@ function App(): React.JSX.Element {
     }).catch(err => {
       console.error('Error getting initial URL:', err);
     });
+
+    // 然后设置监听器
+    const subscription = Linking.addEventListener('url', handleUrl);
 
     return () => {
       console.log('Cleaning up Linking listeners');

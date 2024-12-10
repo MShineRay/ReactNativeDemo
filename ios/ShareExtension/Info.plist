@@ -2,19 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>HostAppBundleIdentifier</key>
+	<string>org.reactjs.native.example.EDPClient</string>
+	<key>HostAppURLScheme</key>
+	<string>edpclient://</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
 			<key>NSExtensionActivationRule</key>
-			<dict>
-				<key>NSExtensionActivationSupportsWebURLWithMaxCount</key>
-				<integer>1</integer>
-				<key>NSExtensionActivationSupportsWebPageWithMaxCount</key>
-				<integer>1</integer>
-				<key>NSExtensionActivationSupportsText</key>
-				<true/>
-			</dict>
+			<string>TRUEPREDICATE</string>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>

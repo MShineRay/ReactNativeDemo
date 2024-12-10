@@ -1242,7 +1242,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-webview (13.12.4):
+  - react-native-webview (13.12.5):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -1777,7 +1777,7 @@ SPEC CHECKSUMS:
   React-logger: 26155dc23db5c9038794db915f80bd2044512c2e
   React-Mapbuffer: ad1ba0205205a16dbff11b8ade6d1b3959451658
   React-microtasksnativemodule: e771eb9eb6ace5884ee40a293a0e14a9d7a4343c
-  react-native-webview: 0bd56be54d01756f20eb942dad37a2cd22a6def2
+  react-native-webview: 40b8823be3fac70f0404016e6aed754ef4307517
   React-nativeconfig: aeed6e2a8ac02b2df54476afcc7c663416c12bf7
   React-NativeModulesApple: c5b7813da94136f50ef084fa1ac077332dcfc658
   React-perflogger: 6afb7eebf7d9521cc70481688ccddf212970e9d3
@@ -1809,6 +1809,6 @@ SPEC CHECKSUMS:
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 3deb2471faa9916c8a82dda2a22d3fba2620ad37
 
-PODFILE CHECKSUM: 3c6dd4b4d2d3f49f26f7f0f46c504623519f722f
+PODFILE CHECKSUM: 3fb895763f20dc8c119206a171c100232f6d973a
 
 COCOAPODS: 1.16.2

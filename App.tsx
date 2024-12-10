@@ -18,7 +18,7 @@ import {
   View,
   Linking
 } from 'react-native';
-import {WebView} from 'react-native-webview';
+// import {WebView} from 'react-native-webview';
 import {
   Colors,
   DebugInstructions,
@@ -72,16 +72,16 @@ type SectionProps = PropsWithChildren<{
 }>;
 
 
-class MyWeb extends Component {
-  render() {
-    return (
-      <WebView
-        source={{ uri: 'https://infinite.red' }}
-        style={{ marginTop: 20, width: '100%', height: 200, borderWidth: 1, borderColor: 'red' }}
-      />
-    );
-  }
-}
+// class MyWeb extends Component {
+//   render() {
+//     return (
+//       <WebView
+//         source={{ uri: 'https://infinite.red' }}
+//         style={{ marginTop: 20, width: '100%', height: 200, borderWidth: 1, borderColor: 'red' }}
+//       />
+//     );
+//   }
+// }
 
 function Section({children, title}: SectionProps): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';

@@ -14,9 +14,9 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-EDPClient-EDPClientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-EDPClient-EDPClientTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		92654B37E86B15B6F71289B7 /* libPods-ShareExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E1528A0F2CD891D331CE7F /* libPods-ShareExtension.a */; };
 		A2D30F139C35A7A1A985045F /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
-		D2EE2C822D087E15004C4775 /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D2EE2C782D087E15004C4775 /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D2B3924A2D092DA100F4F9FE /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D2B392402D092DA100F4F9FE /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D891387421C2797DDB6602C6 /* libPods-ShareExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42E1528A0F2CD891D331CE7F /* libPods-ShareExtension.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,11 +27,11 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = EDPClient;
 		};
-		D2EE2C802D087E15004C4775 /* PBXContainerItemProxy */ = {
+		D2B392482D092DA100F4F9FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D2EE2C772D087E15004C4775;
+			remoteGlobalIDString = D2B3923F2D092DA100F4F9FE;
 			remoteInfo = ShareExtension;
 		};
 /* End PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D2EE2C822D087E15004C4775 /* ShareExtension.appex in Embed Foundation Extensions */,
+				D2B3924A2D092DA100F4F9FE /* ShareExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,34 +71,26 @@
 		5F327E1F6FD5FA2B9D804E11 /* Pods-ShareExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareExtension.release.xcconfig"; path = "Target Support Files/Pods-ShareExtension/Pods-ShareExtension.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EDPClient/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-EDPClient-EDPClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EDPClient-EDPClientTests.release.xcconfig"; path = "Target Support Files/Pods-EDPClient-EDPClientTests/Pods-EDPClient-EDPClientTests.release.xcconfig"; sourceTree = "<group>"; };
-		D2EE2C782D087E15004C4775 /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B392402D092DA100F4F9FE /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2EE2CB92D08855C004C4775 /* EDPClient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = EDPClient.entitlements; path = EDPClient/EDPClient.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		D2EE2C832D087E15004C4775 /* Exceptions for "ShareExtension" folder in "ShareExtension" target */ = {
+		D2B3924B2D092DA100F4F9FE /* Exceptions for "ShareExtension" folder in "ShareExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = D2EE2C772D087E15004C4775 /* ShareExtension */;
-		};
-		D2EE2CA62D088335004C4775 /* Exceptions for "ShareExtension" folder in "EDPClient" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				ShareViewController.swift,
-			);
-			target = 13B07F861A680F5B00A75B9A /* EDPClient */;
+			target = D2B3923F2D092DA100F4F9FE /* ShareExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		D2EE2C792D087E15004C4775 /* ShareExtension */ = {
+		D2B392412D092DA100F4F9FE /* ShareExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D2EE2CA62D088335004C4775 /* Exceptions for "ShareExtension" folder in "EDPClient" target */,
-				D2EE2C832D087E15004C4775 /* Exceptions for "ShareExtension" folder in "ShareExtension" target */,
+				D2B3924B2D092DA100F4F9FE /* Exceptions for "ShareExtension" folder in "ShareExtension" target */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -122,11 +114,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2EE2C752D087E15004C4775 /* Frameworks */ = {
+		D2B3923D2D092DA100F4F9FE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92654B37E86B15B6F71289B7 /* libPods-ShareExtension.a in Frameworks */,
+				D891387421C2797DDB6602C6 /* libPods-ShareExtension.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,7 +181,7 @@
 				13B07FAE1A68108700A75B9A /* EDPClient */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* EDPClientTests */,
-				D2EE2C792D087E15004C4775 /* ShareExtension */,
+				D2B392412D092DA100F4F9FE /* ShareExtension */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -204,7 +196,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* EDPClient.app */,
 				00E356EE1AD99517003FC87E /* EDPClientTests.xctest */,
-				D2EE2C782D087E15004C4775 /* ShareExtension.appex */,
+				D2B392402D092DA100F4F9FE /* ShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,33 +254,33 @@
 			buildRules = (
 			);
 			dependencies = (
-				D2EE2C812D087E15004C4775 /* PBXTargetDependency */,
+				D2B392492D092DA100F4F9FE /* PBXTargetDependency */,
 			);
 			name = EDPClient;
 			productName = EDPClient;
 			productReference = 13B07F961A680F5B00A75B9A /* EDPClient.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D2EE2C772D087E15004C4775 /* ShareExtension */ = {
+		D2B3923F2D092DA100F4F9FE /* ShareExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D2EE2C842D087E15004C4775 /* Build configuration list for PBXNativeTarget "ShareExtension" */;
+			buildConfigurationList = D2B3924C2D092DA100F4F9FE /* Build configuration list for PBXNativeTarget "ShareExtension" */;
 			buildPhases = (
-				E8B669EAEBFA72098AEC59FB /* [CP] Check Pods Manifest.lock */,
-				D2EE2C742D087E15004C4775 /* Sources */,
-				D2EE2C752D087E15004C4775 /* Frameworks */,
-				D2EE2C762D087E15004C4775 /* Resources */,
-				2E91A8017E4B2E89F3702211 /* [CP] Copy Pods Resources */,
+				7C1C369DAB7CB45539E45263 /* [CP] Check Pods Manifest.lock */,
+				D2B3923C2D092DA100F4F9FE /* Sources */,
+				D2B3923D2D092DA100F4F9FE /* Frameworks */,
+				D2B3923E2D092DA100F4F9FE /* Resources */,
+				7F63FC1C519810592922EDB2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D2EE2C792D087E15004C4775 /* ShareExtension */,
+				D2B392412D092DA100F4F9FE /* ShareExtension */,
 			);
 			name = ShareExtension;
 			productName = ShareExtension;
-			productReference = D2EE2C782D087E15004C4775 /* ShareExtension.appex */;
+			productReference = D2B392402D092DA100F4F9FE /* ShareExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -307,7 +299,7 @@
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1610;
 					};
-					D2EE2C772D087E15004C4775 = {
+					D2B3923F2D092DA100F4F9FE = {
 						CreatedOnToolsVersion = 16.1;
 						LastSwiftMigration = 1610;
 					};
@@ -328,7 +320,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* EDPClient */,
 				00E356ED1AD99517003FC87E /* EDPClientTests */,
-				D2EE2C772D087E15004C4775 /* ShareExtension */,
+				D2B3923F2D092DA100F4F9FE /* ShareExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -351,7 +343,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2EE2C762D087E15004C4775 /* Resources */ = {
+		D2B3923E2D092DA100F4F9FE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -394,7 +386,29 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EDPClient/Pods-EDPClient-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		2E91A8017E4B2E89F3702211 /* [CP] Copy Pods Resources */ = {
+		7C1C369DAB7CB45539E45263 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F63FC1C519810592922EDB2 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -489,28 +503,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EDPClient/Pods-EDPClient-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E8B669EAEBFA72098AEC59FB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ShareExtension-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -548,7 +540,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2EE2C742D087E15004C4775 /* Sources */ = {
+		D2B3923C2D092DA100F4F9FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -563,10 +555,10 @@
 			target = 13B07F861A680F5B00A75B9A /* EDPClient */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
-		D2EE2C812D087E15004C4775 /* PBXTargetDependency */ = {
+		D2B392492D092DA100F4F9FE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2EE2C772D087E15004C4775 /* ShareExtension */;
-			targetProxy = D2EE2C802D087E15004C4775 /* PBXContainerItemProxy */;
+			target = D2B3923F2D092DA100F4F9FE /* ShareExtension */;
+			targetProxy = D2B392482D092DA100F4F9FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -731,7 +723,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -804,7 +796,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -834,7 +826,7 @@
 			};
 			name = Release;
 		};
-		D2EE2C852D087E15004C4775 /* Debug */ = {
+		D2B3924D2D092DA100F4F9FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F295A714BBC82447CF8D810 /* Pods-ShareExtension.debug.xcconfig */;
 			buildSettings = {
@@ -851,13 +843,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = BD4XVG4AQ2;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -878,7 +870,7 @@
 			};
 			name = Debug;
 		};
-		D2EE2C862D087E15004C4775 /* Release */ = {
+		D2B3924E2D092DA100F4F9FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5F327E1F6FD5FA2B9D804E11 /* Pods-ShareExtension.release.xcconfig */;
 			buildSettings = {
@@ -896,13 +888,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = BD4XVG4AQ2;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -951,11 +943,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D2EE2C842D087E15004C4775 /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
+		D2B3924C2D092DA100F4F9FE /* Build configuration list for PBXNativeTarget "ShareExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D2EE2C852D087E15004C4775 /* Debug */,
-				D2EE2C862D087E15004C4775 /* Release */,
+				D2B3924D2D092DA100F4F9FE /* Debug */,
+				D2B3924E2D092DA100F4F9FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
